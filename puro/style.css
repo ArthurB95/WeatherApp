@@ -21,6 +21,7 @@ main {
   display: grid;
   place-content: center;
   gap: 2.4rem;
+  padding: 6.4rem;
 }
 
 section {
@@ -31,8 +32,6 @@ section {
 
 .temperature-now {
   background: url(./assets/TemperatureNow.png);
-  width: 48rem;
-  height: 48rem;
   position: relative;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
@@ -148,7 +147,7 @@ h2.title {
   color: #87EBCD;
 }
 
-.air-quality .number {
+.air-quality > .number {
   margin-top: 0.4rem;
   font-size: 4rem;
   color: #E7E7FB;
@@ -173,4 +172,30 @@ h2.title {
 .air-quality .info small {
   font-size: 1.2rem;
   color: #E7E7FB;
+}
+
+/* SUN TIME */
+.sun-chart-wrapper {
+  margin-top: 4rem;
+  height: 11rem;
+  position: relative;
+}
+
+.sun-chart {
+  margin: auto;
+  width: 21.6rem;
+  height: 21.6rem;
+  position: relative;
+}
+
+.sun-chart::before {
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  background: #F6C833;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;margin: -0.6rem;
+  trnasform: rotate(0deg) translate(10.6rem);
 }
